@@ -45,6 +45,9 @@ const NavBar = () => {
             <li className={classes.header}>
                 <Link to='/shop'>Shop</Link>
             </li>
+            <li className={classes.header}>
+                <Link to='/cart'>Cart</Link>
+            </li>
 
 </Nav>
 </header>

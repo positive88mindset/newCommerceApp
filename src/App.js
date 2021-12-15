@@ -11,7 +11,7 @@ import {Router, Routes, Route, Link} from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './themes/themes';
 import { commerce } from './lib/commerce';
-import Cart from './components/Cart';
+import Cart from './components/Cart/Cart';
 
 
 
@@ -78,11 +78,8 @@ console.log(props),
             <Route exact path='/' element={<Home totalitems={props.cart}/>}/>
             <Route exact path='/contact' element={<Contact totalitems={props.cart}/>}/>
             <Route exact path='/about' element={<About totalitems={props.cart}/>}/>
-
-
-
-           {/* <Route exact path='/shop' element={<Shop cart={cart} handleAddToCart={handleAddToCart}/>}/> */}
-           <Route exact path='/cart' element={<Cart cart={props.cart}/>}/>
+           <Route exact path='/shop' element={<Shop cart={cart} handleAddToCart={handleAddToCart}/>}/>
+           <Route exact path='/cart' element={<Cart cart={cart}/>}/>
         </Routes>
 <footer>
 <Footer/>
