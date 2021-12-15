@@ -3,7 +3,7 @@ import useStyles from './NewNavStyles';
 import { AppBar, Toolbar, IconButton, Badge, MenuItem, Menu, Typography } from '@material-ui/core';
 import { ShoppingCart } from '@material-ui/icons';
 import { ClassNames } from "@emotion/react";
-import Logo_final from '../assets/Logo_final.png';
+
 
 const NewNavBar = (props) => {
 
