@@ -55,6 +55,8 @@ const handleAddToCart = async(productId, quantity) => {
 
   return (
 
+
+
 console.log(props),
 
 
@@ -65,14 +67,10 @@ console.log(props),
  <div className="App backgroundColor">
             
 <header>
-
-
-<NewNavBar totalitems={cart.total_items} />
+<NewNavBar Link={Link} totalitems={cart.total_items} />
 
 <NavBar />
 </header>
-
-
 
         <Routes>
             <Route exact path='/' element={<Home totalitems={props.cart}/>}/>
@@ -90,6 +88,7 @@ console.log(props),
 
 
   </ThemeProvider>
+
 
 
   )
