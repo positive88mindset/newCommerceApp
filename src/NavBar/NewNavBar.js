@@ -5,11 +5,25 @@ import { ShoppingCart } from '@material-ui/icons';
 import { ClassNames } from "@emotion/react";
 import LOGO from '../assets/LOGO.png';
 
+
+
+
 const NewNavBar = (props) => {
 
     
     const classes = useStyles();
     const Link=props.Link;
+
+
+
+    function viewcart() {
+
+        console.log('hey');
+
+        window.location = '/cart';
+
+              }
+
 
     return (
 
@@ -29,12 +43,12 @@ const NewNavBar = (props) => {
                 <div className={classes.grow}/>
                 <div className={classes.button}>
 
-                  <IconButton aria-label='Show Cart items' color='inherit'>
+                  <IconButton onClick={viewcart} aria-label='Show Cart items' color='inherit'>
 
-                    <Badge badgeContent={props.totalitems} color='secondary'/>
-                    <Link to='/cart'> 
-                        <ShoppingCart/>
-                </Link>   
+                    <Badge  badgeContent={props.totalitems} color='secondary'/>
+           
+                        <ShoppingCart onClick={viewcart}/>
+                 
                   </IconButton>
 
                     </div>

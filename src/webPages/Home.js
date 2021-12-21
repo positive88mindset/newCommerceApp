@@ -51,7 +51,7 @@ const Home = () => {
 
 <Alert variant='success'>Ready to Shop for puppies?</Alert>
 
-<Button theme={theme} variant='contained' onClick={() => { console.log('onClick'); }}>
+<Button theme={theme} variant='contained' onClick={() => { console.log('onClick');    window.location = '/shop';}}>
     
 SHOP</Button>   
 
