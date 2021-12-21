@@ -4,7 +4,7 @@ import { AppBar, Toolbar, IconButton, Badge, MenuItem, Menu, Typography } from '
 import { ShoppingCart } from '@material-ui/icons';
 import { ClassNames } from "@emotion/react";
 import LOGO from '../assets/LOGO.png';
-
+import { useLocation } from 'react-router-dom';
 
 
 
@@ -13,6 +13,8 @@ const NewNavBar = (props) => {
     
     const classes = useStyles();
     const Link=props.Link;
+    const location = useLocation();
+
 
 
 
@@ -41,8 +43,11 @@ const NewNavBar = (props) => {
                 </Typography>
 
                 <div className={classes.grow}/>
-                <div className={classes.button}>
 
+
+                {location.pathname !== '/cart' && (
+
+                <div className={classes.button}>
                   <IconButton onClick={viewcart} aria-label='Show Cart items' color='inherit'>
 
                     <Badge  badgeContent={props.totalitems} color='secondary'/>
@@ -51,7 +56,7 @@ const NewNavBar = (props) => {
                  
                   </IconButton>
 
-                    </div>
+                    </div> )}
             </Toolbar>
 
 

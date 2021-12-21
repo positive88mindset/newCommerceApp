@@ -33,12 +33,35 @@ function App(props) {
 
 const handleAddToCart = async(productId, quantity) => {
   
-  const item = await commerce.cart.add(productId, quantity);
+  const { cart } = await commerce.cart.add(productId, quantity);
 
-  setCart(item.cart);
+  setCart(cart);
 
 
 }
+
+const handleUpdateCartQty = async(productId, quantity)=>{
+    const { cart } = await commerce.cart.update(productId, { quantity });
+    setCart(cart);
+}
+
+const handleRemoveFromCart = async(productId)=>{
+
+const {cart} = await commerce.cart.remove(productId);
+
+setCart(cart);
+}
+
+
+const handleEmptyCart = async () => {
+
+  const {cart} = await commerce.cart.empty();
+
+  setCart(cart);
+}
+
+
+
 
   
   useEffect(()=>{
@@ -77,7 +100,11 @@ console.log(props),
             <Route exact path='/contact' element={<Contact totalitems={props.cart}/>}/>
             <Route exact path='/about' element={<About totalitems={props.cart}/>}/>
            <Route exact path='/shop' element={<Shop cart={cart} handleAddToCart={handleAddToCart}/>}/>
-           <Route exact path='/cart' element={<Cart cart={cart}/>}/>
+           <Route exact path='/cart' element={<Cart cart={cart}
+              handleUpdateCartQty={handleUpdateCartQty}
+              handleRemoveFromCart={handleRemoveFromCart}
+              handleEmptyCart={handleEmptyCart}
+                                                              />}/>
         </Routes>
 <footer>
 <Footer/>
