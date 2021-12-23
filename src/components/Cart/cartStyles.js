@@ -34,4 +34,11 @@ export default makeStyles((theme) => ({
   },
 
 
+  emptyCart:{
+
+    padding:'200px'
+
+  },
+
+
 }));

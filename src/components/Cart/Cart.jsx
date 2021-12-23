@@ -15,10 +15,12 @@ const Cart = ({cart , handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
     const classes = useStyles();
 
     const EmptyCart = () => (
+
+        <div className={classes.emptyCart}>
         <Typography variant='subtitle1'>You currently have no items in your shopping cart.
-        <Link to='/' className={classes.link}>start adding some</Link>!
-        
+        <Link to='/shop' className={classes.link}>start adding some</Link>!
         </Typography>
+        </div>
     );
 
 
@@ -44,7 +46,7 @@ const Cart = ({cart , handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
             </Typography>
             <div>
                 <Button className={classes.emptyButton} size='large' type='button' variant='contained' color='secondary' onClick={handleEmptyCart}>Empty Cart</Button>
-                <Button className={classes.checkoutButton} size='large' type='button' variant='contained' color='primary'>Checkout</Button>
+                <Button component={Link} to='/checkout' className={classes.checkoutButton} size='large' type='button' variant='contained' color='primary'>Checkout</Button>
             </div>
 
 
@@ -56,7 +58,7 @@ const Cart = ({cart , handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
 
     );
 
-        if(isEmpty) return 'Loading...';
+        if(isEmpty) return (<EmptyCart></EmptyCart>)
 
 
     return (

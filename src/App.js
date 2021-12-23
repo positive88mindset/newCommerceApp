@@ -7,6 +7,7 @@ import Home from './webPages/Home';
 import Contact from './webPages/Contact';
 import About from './webPages/About';
 import Shop from './webPages/Shop';
+import Checkout from './components/CheckoutForm/Checkout/Checkout';
 import {Router, Routes, Route, Link} from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './themes/themes';
@@ -105,7 +106,11 @@ console.log(props),
               handleRemoveFromCart={handleRemoveFromCart}
               handleEmptyCart={handleEmptyCart}
                                                               />}/>
+        
+        <Route exact path='/checkout' element={<Checkout totalitems={props.cart}/>}/>
+        
         </Routes>
+
 <footer>
 <Footer/>
 </footer>
