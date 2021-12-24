@@ -4,7 +4,7 @@ import { useFormContext, Controller } from 'react-hook-form';
 
 
 
-const FormInput = ( { name, label, required } ) => { 
+const FormInput = ( { name, label} ) => { 
 
     const { control } = useFormContext();
    const isError = false;
@@ -23,7 +23,7 @@ const FormInput = ( { name, label, required } ) => {
                 <TextField
                     fullWidth
                     label={label}
-                    required={required}
+                    required
                 />
             )}
          />
