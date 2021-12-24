@@ -107,7 +107,7 @@ console.log(props),
               handleEmptyCart={handleEmptyCart}
                                                               />}/>
         
-        <Route exact path='/checkout' element={<Checkout totalitems={props.cart}/>}/>
+        <Route exact path='/checkout' element={<Checkout cart={cart}/>}/>
         
         </Routes>
 
