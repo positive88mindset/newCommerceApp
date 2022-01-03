@@ -43,7 +43,8 @@
 
   height:100vh;
 
-  background:rgb(255, 254, 248);
+  background: rgb(195,34,34);
+  background: linear-gradient(0deg, rgba(195,34,34,1) 0%, rgba(230,83,255,1) 100%);
   position:absolute;
   top:0px;
   right:0px;

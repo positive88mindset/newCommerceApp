@@ -12,7 +12,6 @@ const NewNavBar = (props) => {
 
     
     const classes = useStyles();
-    const Link=props.Link;
     const location = useLocation();
 
 
@@ -38,7 +37,7 @@ const NewNavBar = (props) => {
                 <a href="/">
                 <img src={LOGO} alt='Logo' height='25px' className={classes.image}/>
                 </a>
-                Fake Shop
+                Kirabiku
 
                 </Typography>
 

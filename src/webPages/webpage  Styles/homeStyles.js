@@ -6,13 +6,13 @@ const useStyles = makeStyles({
 
     welcomeStyle:{
     
-        borderRadius: '20px',
+       
 
 
-        backgroundColor: '#FFF0F3',
+        backgroundColor: '#e3daf8',
         padding: '10px',   
 
-        border: "10px solid #3E3659",
+       
         height:'83%',
     },
 
@@ -20,7 +20,7 @@ const useStyles = makeStyles({
 
         padding: '10px',   
         margin: '100px',
-        color:'secondary',
+        color:'primary',
       },
 
 
@@ -40,15 +40,14 @@ const useStyles = makeStyles({
     padding: '20px',   
     margin: '30px',   
     fontSize:24,
-    borderRadius: '300px',
-
+   
 
 },
 
 
 sectionStyle:{
 
-    backgroundColor: '#E4F4FF',
+    backgroundColor: '#B90000',
     marginLeft: '200px', 
     marginRight: '200px',   
 

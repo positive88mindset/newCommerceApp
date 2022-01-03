@@ -37,6 +37,13 @@ media: {
 
   },
 
+
+  grid: {
+
+    backgroundColor: '#000000',
+  }
+  
+
 }));
 
 

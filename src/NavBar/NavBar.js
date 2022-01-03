@@ -1,7 +1,7 @@
 import React from "react";  
 
 import { Link } from "react-router-dom";
-
+import { Button } from '@mui/material';
 
 import Nav from 'react-bootstrap/Nav';
 
@@ -30,24 +30,47 @@ const NavBar = () => {
 <header>
 <Nav className={classes.header}>
 
-<h1>LOGO</h1>
 
-            <li className={classes.header}>
-            <Link to='/'>Home</Link>
-            </li>
+        <li>
+      <Button id="demo-positioned-button"
+        onClick={''}>
+          <Link className={classes.button} to='/'>Home</Link>
+      </Button>
+      </li>
+    
 
-            <li className={classes.header}>
-                <Link to='/about'>About</Link>
+        <Button id="demo-positioned-button"
+        onClick={''}>
+            <li className={classes.button}>
+                <Link className={classes.button} to='/about'>About</Link>
             </li>
-            <li className={classes.header}>
-                <Link to='/contact'>Contact</Link>
+        </Button>
+
+        <Button id="demo-positioned-button"
+        onClick={''}>
+            <li className={classes.button}>
+                <Link className={classes.button} to='/contact'>Contact</Link>
             </li>
-            <li className={classes.header}>
-                <Link to='/shop'>Shop</Link>
+        </Button>
+
+
+        <Button id="demo-positioned-button"
+        onClick={''}>
+            <li className={classes.button}>
+                <Link className={classes.button} to='/shop'>Shop</Link>
             </li>
-            <li className={classes.header}>
-                <Link to='/cart'>Cart</Link>
+        </Button>
+
+
+        <Button id="demo-positioned-button"
+        onClick={''}>
+            <li className={classes.button}>
+                <Link className={classes.button} to='/cart'>Cart</Link>
             </li>
+        </Button>
+
+
+
 
 </Nav>
 </header>

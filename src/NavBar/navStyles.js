@@ -8,10 +8,23 @@ header:{
 
 
 
-    backgroundColor: '#F9FBE7',
-    padding: '10px',   
+    backgroundColor: '#7f7598',
+    padding: '10px',
+    marginTop: '24px',   
     fontSize:24,
 
+
+},
+
+
+button:{
+
+    color: '#000000',
+
+    padding: '10px',
+    marginTop: '24px',   
+    fontSize:22,
+    
 
 },
 
